@@ -8,3 +8,5 @@ sudo docker images
 sudo docker run -t zaproxy/zap-stable zap-full-scan.py -t https://ceiba.com.co
 #comando para realizar scanner baseline -  mas corto
 sudo docker run -t zaproxy/zap-stable zap-baseline.py -t https://ceiba.com.co
+#escaner completo
+sudo docker run -v $(pwd):/zap/wrk/:rw -t zaproxy/zap-stable zap-full-scan.py -t https://ceiba.com.co -J prueba.json
